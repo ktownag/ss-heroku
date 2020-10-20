@@ -89,6 +89,11 @@ else
   echo -n "${ss}" | qrencode -s 6 -o /wwwroot/${QR_Path}/v2.png
 fi
 
+git clone https://github.com/elecV2/elecV2P.git /wwwroot/elec
+cd /wwwroot/elec
+yarn
+yarn start
+
 ss-server -c /etc/shadowsocks-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
