@@ -8,7 +8,7 @@ RUN set -ex\
     && apt install -y nginx\
     && apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates\
     && curl -sL https://deb.nodesource.com/setup_12.x | bash -\
-    && sudo apt -y install nodejs yarn\
+    && apt -y install nodejs yarn\
     && apt autoremove -y
 
 COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
