@@ -7,7 +7,7 @@ RUN set -ex\
     && apt install -y shadowsocks-libev\
     && apt install -y nginx\
     && apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates\
-    && curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -\
+    && curl -sL https://deb.nodesource.com/setup_12.x | bash -\
     && sudo apt -y install nodejs yarn\
     && apt autoremove -y
 
