@@ -12,7 +12,6 @@ RUN set -ex\
     && apt autoremove -y
 
 COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
-RUN git clone https://github.com/elecV2/elecV2P.git /wwwroot/elec
 COPY conf/ /conf
 COPY entrypoint.sh /entrypoint.sh
 
